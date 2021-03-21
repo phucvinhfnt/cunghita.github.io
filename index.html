@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="templatemo-style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css">
+    <script type="text/javascript" src="/S/Chart/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/S/Chart/canvasjs-3.2.11/canvasjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+            <img class="Logo" src="img/prostate-angle-man_1.png" alt="logo">
+            <img class="Logo2" src="img/NHS.jpg" alt="logo" style="width: 150px;">
+    </div>
+     <!-- <a href="#" class="btn btn-primary" data-toggle="collapse" href="#target1" role="button">Icon</a> -->
+     <!-- <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Charts</button> -->
+  <!-- <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div> -->
+  <!-- <button type="button" class="btn btn-info" data-toggle="collapse" data-target="">Icons</button> -->
+  <div id="menu">
+    <ul>
+      <li><a href="#">Trang chủ</a></li>
+      <li><a href="#">Diễn đàn</a></li>
+      <li><a href="#">Tin tức<i class="fas fa-caret-down"></i></a>
+        <ul class="sub-menu">
+          <li><a href="#">WordPress</a></li>
+          <li><a href="#">SEO</a></li>
+          <li><a href="#">Hosting</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Hỏi đáp</a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </div>
+  <div class="login-box">
+    <h2>Nhập thông tin</h2>
+    <form action="#">
+      <div class="user-box">
+        <input type="text" name="Y1" id="Y1" autocomplete="off">
+        <label>Thông số 1</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="Y2" id="Y2" autocomplete="off">
+        <label>Thông số 2</label>
+      </div>            
+        <!-- <button onclick="Chart()">Xác nhận</button> -->
+        <a href="#" onclick="Chart()">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </a>
+    </form>
+  </div>
+    <div class="tm-paging-links" id = "tog">
+      <nav>
+        <ul>
+          <li class="tm-paging-item"><a href="#" class="tm-paging-link active">Chart1</a></li>
+          <li class="tm-paging-item"><a onclick="Chart2()" href="#" class="tm-paging-link">Chart2</a></li>
+          <!-- <li class="tm-paging-item"><a href="#" class="tm-paging-link">Noodle</a></li> -->
+        </ul>
+      </nav>
+    </div>
+    <div class="row tm-gallery">
+      <!-- gallery page 1 -->
+      <div id="tm-gallery-page-chart1" class="tm-gallery-page">  
+    <!-- <h3>CanvasJS Charts with Bootstrap Accordion / Collapse</h3> -->
+<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-primary" id = "ivs">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class = "chart1">
+          Chart 1
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body"> -->
+        <div id="chartContainer1" style="height: 400px; max-width: 100%;"></div>
+        </div>
+        <!-- </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-primary" id = "ivs2">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Chart 2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body"> -->
+        <div id="tm-gallery-page-chart2" class="tm-gallery-page hidden">
+        <div id="chartContainer2" style=" height: 400px; max-width: 100%;"></div>
+        </div>
+      <!-- </div>
+    </div>
+  </div>
+</div> -->
+    <script>
+        function Chart(){
+            // document.getElementById("ivs").style.opacity = 1;
+            // document.getElementById("ivs2").style.opacity = 1;
+            document.getElementById("tog").style.visibility = 'visible';
+        var y1 = document.getElementById("Y1").value;
+        var y2 = document.getElementById("Y2").value;
+        var chart = new CanvasJS.Chart("chartContainer1", {
+            animationEnabled: true,
+            theme: "light2", // "light1", "light2", "dark1", "dark2"
+            title: {
+                text: "Overall Survival"
+            },
+            axisY: {
+                title: "Growth Rate (in %)",
+                suffix: "%"
+            },
+            axisX: {
+                title: "years after diagnosis",
+            },
+            data: [{
+                type: "column",
+                yValueFormatString: "#,##0.0#\"%\"",
+                dataPoints: [
+                    {  label:"10",y: +y1, indexLabel: +y1+"% survive at least 10 years" },	
+                    
+                    { label: "15", y: +y2, indexLabel: +y2+"% survive at least 15 years" }
+                    
+                ]
+            }]
+        });
+        chart.render(); 
+             
+        }  
+        function Chart2(){
+      var chart2 = new CanvasJS.Chart("chartContainer2", {
+      title:{
+      	text:"Chart 2"
+      },
+      zoomEnabled: true,
+      data: [
+      {
+        type: "line",
+        dataPoints: [
+        { x: 10, y: 58 },
+        { x: 20, y: 35},
+        { x: 30, y: 36 },
+        { x: 40, y: 75 },
+        { x: 50, y: 45 },
+        { x: 60, y: 28 },
+        { x: 70, y: 48 },
+        { x: 80, y: 14 },
+        { x: 90, y: 54}
+        ]
+      }
+      ]
+    });
+    chart2.render();   
+  } 
+    $(document).ready(function(){
+			// Handle click on paging links
+			$('.tm-paging-link').click(function(e){
+				e.preventDefault();
+				
+				var page = $(this).text().toLowerCase();
+				$('.tm-gallery-page').addClass('hidden');
+				$('#tm-gallery-page-' + page).removeClass('hidden');
+				$('.tm-paging-link').removeClass('active');
+				$(this).addClass("active");
+			});
+		});
+    // function Chart2(){
+    //   document.getElementById("chartContainer2").style.opacity = 1;
+    // }
+  //   $('#collapseOne').on("shown.bs.collapse",function(){
+  //     Chart();
+  //    // $('#collapseTwo').off(); // to remove the binded event after the initial rendering if needed
+  // });
+        </script>
+        <!-- <div id="chartContainer" style="height: 370px; width: 50%;"></div> -->
+</body>
+</html>
