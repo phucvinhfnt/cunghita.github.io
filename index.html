@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="templatemo-style.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css">
-    <script type="text/javascript" src="bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="canvasjs-3.2.11/canvasjs.min.js"></script>
+    <script src="/S/"></script>
+    <script type="text/javascript" src="/S/Chart/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/S/Chart/canvasjs-3.2.11/canvasjs.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="queries.css">
     <title>Document</title>
 </head>
 <body>
@@ -71,12 +72,11 @@
       <nav>
         <ul>
           <li class="tm-paging-item"><a href="#" class="tm-paging-link active">Chart1</a></li>
-          <li class="tm-paging-item"><a onclick="Chart2()" href="#" class="tm-paging-link">Chart2</a></li>
+          <li class="tm-paging-item"><a  href="#" class="tm-paging-link">Chart2</a></li>
           <!-- <li class="tm-paging-item"><a href="#" class="tm-paging-link">Noodle</a></li> -->
         </ul>
       </nav>
     </div>
-    <div class="row tm-gallery">
       <!-- gallery page 1 -->
       <div id="tm-gallery-page-chart1" class="tm-gallery-page">  
     <!-- <h3>CanvasJS Charts with Bootstrap Accordion / Collapse</h3> -->
@@ -91,7 +91,7 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body"> -->
-        <div id="chartContainer1" style="height: 400px; max-width: 100%;"></div>
+        <div id="chartContainer1"></div>
         </div>
         <!-- </div>
       </div>
@@ -108,7 +108,7 @@
     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="panel-body"> -->
         <div id="tm-gallery-page-chart2" class="tm-gallery-page hidden">
-        <div id="chartContainer2" style=" height: 400px; max-width: 100%;"></div>
+        <div id="chartContainer2"></div>
         </div>
       <!-- </div>
     </div>
@@ -148,7 +148,7 @@
         chart.render(); 
              
         }  
-        function Chart2(){
+        // function Chart2(){
       var chart2 = new CanvasJS.Chart("chartContainer2", {
       title:{
       	text:"Chart 2"
@@ -172,7 +172,7 @@
       ]
     });
     chart2.render();   
-  } 
+  // } 
     $(document).ready(function(){
 			// Handle click on paging links
 			$('.tm-paging-link').click(function(e){
