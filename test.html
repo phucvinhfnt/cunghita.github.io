@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="S/style.css"> -->
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Phần trăm</label>
+        <input type="text" name="y3" id="y3">
+        <a href="#" onclick="Play()">Xác nhận</a>      
+    </form>
+    <!-- <img src="/S/Chart/img/blue.png" alt="">
+    <img src="/S/Chart/img/purple.png" alt=""> -->
+    <div id="chartContainer3" style="width: 500px; height: 400px; float: right;"></div>
+    <div style="float: right;">
+        <img src="/S/Chart/img/blue.png" alt="">
+        <span style="top: auto;">:Số người sống sót</span>
+    </div>
+    <!-- <img src="" alt="" id ="chartContainer3"> -->
+    <script>
+         function Play(){
+        var y3 = document.getElementById("y3").value;
+for( var i = 0; i < 10*10; i++) {
+    var row = i / 10;
+    var col = i % 10;
+    if(col == 0 && row > 0) {
+       //document.write("<div style='clear:both'></div>");
+       var para3 = document.createElement("DIV");
+       para3.setAttribute("style","clear:both");
+       document.getElementById("chartContainer3").appendChild(para3);
+       //document.getElementById("chartContainer3").innerHTML = "<div style='clear:both'></div>";
+    }
+     if (i < y3) {
+        var para = document.createElement("IMG");
+        para.setAttribute("src", "/S/Chart/img/blue.png");
+        document.getElementById("chartContainer3").appendChild(para);
+     } else {
+        var para2 = document.createElement("IMG");
+        para2.setAttribute("src", "/S/Chart/img/purple.png");
+        document.getElementById("chartContainer3").appendChild(para2);
+     
+     }
+}
+     }
+    </script>
+</body>
+</html>
