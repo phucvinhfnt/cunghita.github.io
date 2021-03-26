@@ -10,6 +10,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <link rel="stylesheet" href="S/style.css"> -->
     <title>Document</title>
+    <style>
+img {
+  padding:20px;
+}
+</style>
 </head>
 <body>
     <form action="">
@@ -20,10 +25,7 @@
     <!-- <img src="/S/Chart/img/blue.png" alt="">
     <img src="/S/Chart/img/purple.png" alt=""> -->
     <div id="chartContainer3" style="width: 500px; height: 400px; float: right;"></div>
-    <div style="float: right;">
-        <img src="/S/Chart/img/blue.png" alt="">
-        <span style="top: auto;">:Số người sống sót</span>
-    </div>
+    
     <!-- <img src="" alt="" id ="chartContainer3"> -->
     <script>
          function Play(){
@@ -41,12 +43,10 @@ for( var i = 0; i < 10*10; i++) {
      if (i < y3) {
         var para = document.createElement("IMG");
         para.setAttribute("src", "/img/blue.png");
-         para.setAttribute("padding","(10px , 10px)");
         document.getElementById("chartContainer3").appendChild(para);
      } else {
         var para2 = document.createElement("IMG");
         para2.setAttribute("src", "/img/purple.png");
-          para2.setAttribute("padding","(10px , 10px)");
         document.getElementById("chartContainer3").appendChild(para2);
      
      }
