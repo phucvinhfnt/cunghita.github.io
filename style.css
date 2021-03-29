@@ -497,6 +497,38 @@ body{
   background: #F7B1AB;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+/* -------------------------- */
+.radio-container3 {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+  padding: 5px;
+}
+
+.radio-container3 label {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: 0.2s all ease-in-out;
+  width: 160px;
+}
+
+.radio-container3 input[type=radio] {
+  display: none;
+}
+
+.radio-container3 input[type=radio]:checked + label {
+  background: #F7B1AB;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* ------------------------- */
 .disclaimer2 input[type=checkbox]{
   height: 14px;
   line-height: 0px;

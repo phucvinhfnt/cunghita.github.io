@@ -38,29 +38,6 @@
       <li><a href="#">Liên hệ</a></li>
     </ul>
   </div>
-  <!-- <div class="login-box">
-    <h2>Nhập thông tin</h2>
-    <form action="#">
-      <div class="user-box">
-        <input type="text" name="Y1" id="Y1" autocomplete="off">
-        <label>Thông số 1</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="Y2" id="Y2" autocomplete="off">
-        <label>Thông số 2</label>
-        <input type="text" name="Y3" id="Y3" autocomplete="off">
-        <label>Phần trăm</label>
-      </div>            
-        
-        <a href="#" onclick="Chart()">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Submit
-        </a>
-    </form>
-  </div> -->
   <div class="form-info">
   <div class='signup-container'>
     <div class='right-container'>
@@ -73,15 +50,9 @@
             <input id='name' placeholder="Full Name" type='text'>
           </div>
           <div class="pets-name">
-              <label for="">Fractures since the age of 50
+              <label for="">FN-BMD
               </label>
-              <!-- <div style="font-size: 0.8em;">(excluding major trauma, e.g. car accidents)</div> -->
-              <select name="" id="Fra-50" class="SL">
-                  <option value="0">1</option>
-                  <option value="1">2</option>
-                  <option value="2">3</option>
-                  <option value="3 or more">3 or more</option>
-              </select>
+              <input id='FN-BMD' placeholder="-1 T-score" type='text'>
           </div>
         </div>
         <div class='set'>
@@ -139,14 +110,9 @@
                 <option value="96">96</option>
             </select>
           </div>
-          <div class='pets-birthday'>
-            <label for='pets-birthday'>Falls over last 12 months</label>
-            <select name="" id="" class="SL">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3 or more</option>
-            </select>
+          <div class="pets-name">
+            <label for="BMD">BMI</label>
+          <input type="text" name="BMI" id="BMI" placeholder="kg/cm²">
           </div>
         </div>
         <div class='set'>
@@ -160,14 +126,12 @@
             </div>
           </div>
           <div class='pets-spayed-neutered'>
-            <label for='pet-spayed'>Do you have a
-                Bone Mineral Density (BMD)
-                measurement?</label>
-            <div class='radio-container'>
+            <label for='pet-spayed'>Fall</label>
+            <div class='radio-container3'>
               <input checked='' id='Yes' name='spayed-neutered' type='radio' value='Yes' onclick="Visi2()">
               <label for='Yes'>Yes</label>
-              <input id='No' name='spayed-neutered' type='radio' value='No' onclick="Visi()">
-              <label for='No'>No</label>
+              <!-- <input id='No' name='spayed-neutered' type='radio' value='No' onclick="Visi()">
+              <label for='No'>No</label> -->
             </div>
           </div>
         </div>
@@ -176,27 +140,32 @@
             <label for="Weight">Weight</label>
           <input type="text" name="weight" id="weight" placeholder="kg">
           </div>
-          <div class='pets-name'>
+          <div class='pets-birthday'>
+            <label for='pets-birthday'>Các bệnh khác</label>
+            <select name="" id="" class="SL">
+                <option value="cardiovascular">Bệnh tim mạch</option>
+                <option value="cancer">Ung thư</option>
+                <option value="diabetes">Tiểu đường tuýp 2</option>
+                <option value="neuromuscular">Bệnh thần kinh</option>
+                <option value="rheumatoid arthritis">Viêm khớp mãn tính</option>
+                <option value="copd">Bệnh phổi tắc nghẽn mạn tính</option>
+            </select>
+          </div>
+          <!-- <div class='pets-name'>
             <label for='T-score'>T-scores
               <div class="avatar" data-tooltip="T-score is the BMD value compared with young normal people of the same sex and general ethnicity. These are usually listed prominently on the BMD report. You must enter the + or - in front of the value as shown."></div>
             </label>
             <input id='T-score' type='text'>
-          </div>
-          <div class="pets-name">
-            <label for="BMD">Actual BMD</label>
-          <input type="text" name="BMD" id="BMD" placeholder="g/cm²">
-          </div>
-        </div>
-        <div>OR</div>
-        <div class='pets-spayed-neutered'>
-          <label for='pet-spayed'>Densitometer</label>
-          <div class='radio-container2'>
-            <input checked='' id='Lunar' name='DXA' type='radio' value='by DXA GE Lunar'>
-            <label for='Lunar'>by DXA GE Lunar</label>
-            <input id='Hologic' name='DXA' type='radio' value='by DXA Hologic'>
-            <label for='Hologic'>by DXA Hologic</label>
+          </div> -->
+          <div class='pets-spayed-neutered'>
+            <label for='pet-spayed'>Prior fracture</label>
+            <div class='radio-container3'>
+              <input checked='' id='Lunar' name='DXA' type='radio' value='by DXA GE Lunar'>
+              <label for='Lunar'>Yes</label>
+            </div>
           </div>
         </div>
+        <!-- <div>OR</div> -->       
         <div class="disclaimer">
           <div>
             <h2 style="margin: 10px 0;">Disclaimer</h2>
@@ -209,7 +178,7 @@
         </div>
       <footer>
         <div class='set'>
-          <button id='back' onclick="window.location.href='form2.html'">Bảng 2</button>
+          <button id='back' onclick="window.location.href='index.html'">Bảng 1</button>
           <button id='next' onclick="Chart()">Next</button>
         </div>
       </footer>  
@@ -233,9 +202,17 @@
         <div id="chartContainer2"></div>
         </div>
         <div id="tm-gallery-page-chart3" class="tm-gallery-page hidden" style="margin-left: 100px;">
-          <div id="chartContainer3">
-          </div>
-          <img src="/S/Chart/img/blue.png" alt=""> Số người sống sót
+            <div class="row"> 
+                <div class="col-sm-5">
+                    <div id="chartContainer3">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <img src="/S/Chart/img/blue.png" alt=""> Số người sống sót
+                </div>
+            </div>
+          
+          
           </div>
     <script>
       function Visi(){
@@ -252,8 +229,8 @@
             $('.tm-paging-links').removeClass('hidden');
             $('.tm-gallery-page').removeClass('hidden2');
             document.getElementById("tog").style.visibility = 'visible';
-        var y1 = document.getElementById("T-score").value;
-        var y2 = document.getElementById("BMD").value;
+        var y1 = document.getElementById("FN-BMD").value;
+        var y2 = document.getElementById("BMI").value;
         var chart = new CanvasJS.Chart("chartContainer1", {
             animationEnabled: true,
             theme: "light2", // "light1", "light2", "dark1", "dark2"

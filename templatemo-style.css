@@ -15,7 +15,7 @@ a, button { transition: all 0.3s ease; }
 
 /* Bootstrap grid system  */
 
-html {
+/* html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
 }
@@ -24,7 +24,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-}
+} */
 
 .container {
   width: 100%;
@@ -184,6 +184,10 @@ html {
 }
 
 .hidden {
+  display: none !important;
+}
+
+.hidden2 {
   display: none !important;
 }
 
