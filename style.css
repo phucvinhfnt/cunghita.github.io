@@ -615,7 +615,7 @@ body{
   min-height: calc(100vh - 700px);
 }
 .main-content ul{
-  list-style-image: url('/S/Chart/img/bullet-plus.png');
+  list-style-image: url('img/bullet-plus.png');
 }
 .main-content ul li a{
   text-decoration: none;
