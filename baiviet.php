@@ -35,11 +35,22 @@
   <div class="main-content" tabindex="-1" class="row">
       <div class="col-sm-10 col-sm offset-1 col-lg-8 col-lg offset-2 header-content">
           <h2 style="color:rgb(31, 107, 196);">
-              <?php echo "Tên danh mục" ?>
+              <?php echo "Tổng quát" ?>
           </h2> 
+          <ul>
+              <li><a href="#baiviet1">
+                  <span style="color:rgb(31, 107, 196);">Loãng xương là gì?</span>
+              </a></li>
+              <li><a href="#baiviet2">
+                  <span style="color: rgb(31, 107, 196);">Phần mềm chẩn đoán loãng xương dành cho ai?</span>
+              </a></li>
+              <li><a href="#baiviet3">
+                  <span style="color: rgb(31, 107, 196);">Cách phần mềm hoạt động</span>
+              </a></li>
+          </ul>
           <?php
            $cnn = new mysqli("localhost",'root','','pmnckh') ;
-           $kq = $cnn->query("select * from baiviet ");
+           $kq = $cnn->query("select tieude,noidung from baiviet ");
           
            while( $item = mysqli_fetch_object($kq))
            {
@@ -48,7 +59,7 @@
           <div id="baiviet<?php echo $item->id ?>">
               <section>
                   <h2 style="color: rgb(31, 107, 196);"><?php echo $item->tieude ; ?></h2>
-                  <p class="tomtat"><?php echo $item->tomtat ; ?></p>
+                  <!-- <p class="tomtat"></p> -->
                   <div>
                   <?php echo $item->noidung ; ?>
                   </div>
