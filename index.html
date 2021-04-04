@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="templatemo-style.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css">
-    <script type="text/javascript" src="bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="canvasjs-3.2.11/canvasjs.min.js"></script>
+    <script type="text/javascript" src="/S/Chart/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/S/Chart/canvasjs-3.2.11/canvasjs.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -25,15 +25,15 @@
   <div id="menu">
     <ul>
       <li><a href="home.html">Trang chủ</a></li>
-      <li><a href="#">Giới thiệu<i class="fas fa-caret-down"></i></a>
+      <li><a href="#">Diễn đàn</a></li>
+      <li><a href="#">Tin tức<i class="fas fa-caret-down"></i></a>
         <ul class="sub-menu">
-          <li><a href="introduce.html">Phần mềm chẩn đoán</a></li>
-          <li><a href="introduce.html">Loãng xương là gì?</a></li>
-          <li><a href="introduce.html">Dành cho ai?</a>
+          <li><a href="#">WordPress</a></li>
+          <li><a href="#">SEO</a></li>
+          <li><a href="#">Hosting</a>
           </li>
         </ul>
       </li>
-      <li><a href="#">Diễn đàn</a></li>
       <li><a href="#">Hỏi đáp</a></li>
       <li><a href="#">Liên hệ</a></li>
     </ul>
@@ -65,19 +65,20 @@
   <div class="form-info">
   <div class='signup-container'>
     <div class='right-container'>
+      <form action="xu_ly_form" method="POST">
         <h1>FRACTURE RISK CALCULATOR</h1>
         <h1>Fill out the following to estimate your fracture risk</h1>
         <div class='set'>
-          <div class='pets-name'>
-            <label for='pets-name'>Full Name
+          <div class='pets-name3'>
+            <label for='pets-name3'>Full Name
                 (optional)</label>
-            <input id='name' placeholder="Full Name" type='text'>
+            <input id='name' name="name" placeholder="Full Name" type='text'>
           </div>
-          <div class="pets-name">
+          <div class="pets-name3">
               <label for="">Fractures since the age of 50
               </label>
               <!-- <div style="font-size: 0.8em;">(excluding major trauma, e.g. car accidents)</div> -->
-              <select name="" id="Fra-50" class="SL">
+              <select name="Fra-50" id="Fra-50" class="SL">
                   <option value="0">1</option>
                   <option value="1">2</option>
                   <option value="2">3</option>
@@ -89,7 +90,7 @@
           <div class='pets-breed'>
             <label for='pets-breed'>Age</label>
             <!-- <input id='pets-breed' placeholder="Pet's breed" type='text'> -->
-            <select name="" id="pets-breed" class="SL">
+            <select name="age" id="pets-breed" class="SL">
                 <option value="Select Age">Select Age</option>
                 <option value="50">50</option>
                 <option value="51">51</option>
@@ -142,7 +143,7 @@
           </div>
           <div class='pets-birthday'>
             <label for='pets-birthday'>Falls over last 12 months</label>
-            <select name="" id="" class="SL">
+            <select name="Fall-12" id="Fall-12" class="SL">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -154,10 +155,10 @@
           <div class='pets-gender'>
             <label for='pet-gender-female'>Sex</label>
             <div class='radio-container'>
-              <input checked='' id='pet-gender-female' name='pet-gender' type='radio' value='female'>
-              <label for='pet-gender-female'>Female</label>
-              <input id='pet-gender-male' name='pet-gender' type='radio' value='male'>
-              <label for='pet-gender-male'>Male</label>
+              <input checked='' id='female' name='gender' type='radio' value='female'>
+              <label for='female'>Female</label>
+              <input id='male' name='gender' type='radio' value='male'>
+              <label for='male'>Male</label>
             </div>
           </div>
           <div class='pets-spayed-neutered'>
@@ -165,9 +166,9 @@
                 Bone Mineral Density (BMD)
                 measurement?</label>
             <div class='radio-container'>
-              <input checked='' id='Yes' name='spayed-neutered' type='radio' value='Yes' onclick="Visi2()">
+              <input checked='' id='Yes' name='YS-BMD' type='radio' value='Yes' onclick="Visi2()">
               <label for='Yes'>Yes</label>
-              <input id='No' name='spayed-neutered' type='radio' value='No' onclick="Visi()">
+              <input id='No' name='YS-BMD' type='radio' value='No' onclick="Visi()">
               <label for='No'>No</label>
             </div>
           </div>
@@ -181,15 +182,15 @@
             <label for='T-score'>T-scores
               <div class="avatar" data-tooltip="T-score is the BMD value compared with young normal people of the same sex and general ethnicity. These are usually listed prominently on the BMD report. You must enter the + or - in front of the value as shown."></div>
             </label>
-            <input id='T-score' type='text'>
+            <input id='T-score' name="T-score" type='text'>
           </div>
           <div class="pets-name">
             <label for="BMD">Actual BMD</label>
           <input type="text" name="BMD" id="BMD" placeholder="g/cm²">
           </div>
         </div>
-        <div>OR</div>
-        <div class='pets-spayed-neutered'>
+        <div class="or">OR</div>
+        <div class='pets-spayed-neutered2'>
           <label for='pet-spayed'>Densitometer</label>
           <div class='radio-container2'>
             <input checked='' id='Lunar' name='DXA' type='radio' value='by DXA GE Lunar'>
@@ -213,7 +214,8 @@
           <button id='back' onclick="window.location.href='form2.html'">Bảng 2</button>
           <button id='next' onclick="Chart()">Next</button>
         </div>
-      </footer>  
+      </footer> 
+    </form> 
       </div> 
      </div>   
     </div>
@@ -236,16 +238,20 @@
         <div id="tm-gallery-page-chart3" class="tm-gallery-page hidden" style="margin-left: 100px;">
           <div id="chartContainer3">
           </div>
-          <img src="img/blue.png" alt=""> Số người sống sót
+          <img src="/S/Chart/img/blue.png" alt=""> Số người sống sót
           </div>
     <script>
       function Visi(){
         $('.pets-name').addClass('hidden');
         $('.pets-name2').removeClass('hidden');
+        $('.pets-spayed-neutered2').addClass('hidden');
+        $('.or').addClass('hidden');
       }
       function Visi2(){
         $('.pets-name2').addClass('hidden');
         $('.pets-name').removeClass('hidden');
+        $('.pets-spayed-neutered2').removeClass('hidden');
+        $('.or').removeClass('hidden');
       }
         function Chart(){
             // document.getElementById("ivs").style.opacity = 1;
@@ -299,14 +305,14 @@
          //document.write("<div class='square'></div>");
          //document.getElementById("chartContainer3").innerHTML = "<img src='/S/Chart/img/purple.png'>";
          var para = document.createElement("IMG");
-        para.setAttribute("src", "img/blue.png");
+        para.setAttribute("src", "/S/Chart/img/blue.png");
         para.setAttribute("id","p-img");
         document.getElementById("chartContainer3").appendChild(para);
       } else {
          //document.write("<div class='empty-square'></div>");
          //document.getElementById("chartContainer3").innerHTML = "<img src='/S/Chart/img/purple.png'>";
          var para2 = document.createElement("IMG");
-        para2.setAttribute("src", "img/purple.png");
+        para2.setAttribute("src", "/S/Chart/img/purple.png");
         para2.setAttribute("id","p-img");
         document.getElementById("chartContainer3").appendChild(para2);
       
