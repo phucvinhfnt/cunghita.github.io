@@ -189,10 +189,10 @@
           <button id='next' onclick="Chart()">Next</button>
         </div>
       </div> 
-    <!-- </form>  -->
       </div> 
      </div>   
     </div>
+    <!-- <button id='next' onclick="Chart()">Next</button> -->
     <div class="tm-paging-links hidden" id = "tog">
       <nav>
         <ul>
@@ -203,6 +203,7 @@
       </nav>
     </div>
       <!-- gallery page 1 -->
+      <div class="col-md-6">
       <div id="tm-gallery-page-chart1" class="tm-gallery-page hidden2">  
         <div id="chartContainer1"></div>
         </div>
@@ -210,17 +211,31 @@
         <div id="chartContainer2"></div>
         </div>
         <div id="tm-gallery-page-chart3" class="tm-gallery-page row1 hidden" style="margin-left: 100px; position: relative;">
-          <div class="col-xs-12">
-            <div class="row1" style="clear:both;">
-          <div id="chartContainer3" class="col-sm-7">
+          <!-- <div class="col-xs-12"> -->
+            <!-- <div> -->
+            <!-- <div class="row1" style="clear:both;"> -->
+              <!-- <div> -->
+          <!-- <div id="chartContainer3" class="col-sm-7"> -->
+            <div id="chartContainer3">
           </div>
-          <div class="col-md-4 offset-3" style="padding-top:35px; position: relative;">
+          <div class="col-md-6 offset-7" style="padding-top:35px; position: relative; margin-top: -200px;">          
             <img src="/S/Chart/img/blue.png" alt=""> Số người sống sót
+            <br>
             <img src="/S/Chart/img/purple.png" alt=""> Số người tử vong
           </div>
-          </div>
-          </div>
+          <!-- </div> -->
+          <!-- </div> -->
          </div>
+        </div>
+        <div class="col-md-4 offset-8 hidden" id = "noti">
+          <div class="well">
+            <section>
+              <h3>Important</h3>
+              <p>These results are estimates based on data from men with similar characteristics. 
+                There are other important factors which affect outcomes. 
+                Your specialist will help you put these results in context.</p>
+            </section>
+          </div>
         </div>
     <script>
       function Visi(){
@@ -238,10 +253,10 @@
         function Chart(){
             // document.getElementById("ivs").style.opacity = 1;
             // document.getElementById("ivs2").style.opacity = 1;
-           var age = document.getElementById("age").value;
-           var y1 = document.getElementById("T-score").value;
-           var Pfx = document.getElementById("Fra-50").value;
-           var Fall = document.getElementById("Fall-12").value;
+          //  var age = document.getElementById("age").value;
+          //  var y1 = document.getElementById("T-score").value;
+          //  var Pfx = document.getElementById("Fra-50").value;
+          //  var Fall = document.getElementById("Fall-12").value;
            ////////////////////table 1/////////////////////////
             var So5_Any_Women = 0.995750118;
             var So10_Any_Women = 0.990905138;
@@ -296,22 +311,24 @@
             var b2_Any_men_weight = -0.00765;
             var b3_Any_men_weight = 1.00818;
             var b4_Any_men_weight = 0.12797;
-
+            $('.offset-8').removeClass('hidden');
             $('.tm-paging-links').removeClass('hidden');
             $('.tm-gallery-page').removeClass('hidden2');
             document.getElementById("tog").style.visibility = 'visible';
         // var y1 = document.getElementById("T-score").value;
         // var y2 = document.getElementById("BMD").value;
-        var y = (b1_Hip_Women_BMD * age) + (b2_Hip_Women_BMD * y1) + (b3_Hip_Women_BMD * Pfx) + (b4_Hip_Women_BMD * Fall);
-        var n = y.toFixed(5);
-        var test = 1- (So5_Hip_Women**(Math.exp(n)));
-        var test2 = test.toFixed(3) * 100;
-        var risk5 = test2.toFixed(1);
-        var test3 = 1- (So10_Hip_Women**(Math.exp(n)));
-        var test4 = test3.toFixed(3) * 100;
-        var risk10 = test4.toFixed(1);
-        var tim = 100 - (test2.toFixed(0));
-        var chart = new CanvasJS.Chart("chartContainer1", {            
+        // var y = (b1_Hip_Women_BMD * age) + (b2_Hip_Women_BMD * y1) + (b3_Hip_Women_BMD * Pfx) + (b4_Hip_Women_BMD * Fall);
+        // var n = y.toFixed(5);
+        // var test = 1- (So5_Hip_Women**(Math.exp(n)));
+        // var test2 = test.toFixed(3) * 100;
+        // var risk5 = test2.toFixed(1);
+        // var test3 = 1- (So10_Hip_Women**(Math.exp(n)));
+        // var test4 = test3.toFixed(3) * 100;
+        // var risk10 = test4.toFixed(1);
+        // var tim = 100 - (test2.toFixed(0));
+        var chart = new CanvasJS.Chart("chartContainer1", { 
+        width: 600,
+        height: 300,           
       title:{
         text: "5 & 10 year Fracture Risk",
       },
@@ -363,7 +380,7 @@
        para3.setAttribute("style","clear:both");
        document.getElementById("chartContainer3").appendChild(para3);
      }
-      if (i < tim) {
+      if (i < 96) {
          //document.write("<div class='square'></div>");
          //document.getElementById("chartContainer3").innerHTML = "<img src='/S/Chart/img/purple.png'>";
          var para = document.createElement("IMG");

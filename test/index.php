@@ -54,7 +54,7 @@
           </ul>
         </div>
        <div class = "form-a">
-           <form action="test.php" method = "POST">
+           <form method = "POST">
                <div class = "header-form">
                    <p>Fill out the following to estimate your fracture risk</p>                
                </div>
@@ -113,9 +113,9 @@
                        <label for="D-BMD">Do you have a Bone Mineral Density (BMD) measurement?</label>
                    </div>
                    <div class = "element">
-                   <input type="radio" id="Yes" name="D-BMD" value="Yes">
+                   <input type="radio" id="bmd" name="D-BMD" value="bmd">
                     <label for="Yes">Yes</label><br>
-                   <input type="radio" id="No" name="D-BMD" value="No">
+                   <input type="radio" id="wei" name="D-BMD" value="wei">
                     <label for="No">No</label><br>
                    </div>
                </div>
@@ -216,7 +216,9 @@
             //   $('.warning').removeClass('hidden');
             // }
             // else{
-              
+              <?php 
+                require_once("test.php");
+                ?>
             $('.tm-paging-links').removeClass('hidden');
             $('.tm-gallery-page').removeClass('hidden2');
             document.getElementById("tog").style.visibility = 'visible';

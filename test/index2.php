@@ -94,9 +94,9 @@ session_start();
             <label for='pet-gender-female'>Sex</label>
             <div class='radio-container'>
               <input checked='' id='wo' name='gender' type='radio' value='wo'>
-              <label for='female'>Female</label>
+              <label for='wo'>Female</label>
               <input id='men' name='gender' type='radio' value='men'>
-              <label for='male'>Male</label>
+              <label for='men'>Male</label>
             </div>
           </div>
           <div class='pets-spayed-neutered'>
@@ -104,10 +104,10 @@ session_start();
                 Bone Mineral Density (BMD)
                 measurement?</label>
             <div class='radio-container'>
-              <input checked='' id='Yes' name='YS-BMD' type='radio' value='Yes' onclick="Visi2()">
-              <label for='Yes'>Yes</label>
-              <input id='No' name='YS-BMD' type='radio' value='No' onclick="Visi()">
-              <label for='No'>No</label>
+              <input checked='' id='bmd' name='YS-BMD' type='radio' value='bmd' onclick="Visi2()">
+              <label for='bmd'>Yes</label>
+              <input id='wei' name='YS-BMD' type='radio' value='wei' onclick="Visi()">
+              <label for='wei'>No</label>
             </div>
           </div>
         </div>
