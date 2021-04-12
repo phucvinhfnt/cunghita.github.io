@@ -293,6 +293,21 @@ body{
     /* height: 300px;
     width: 33%; */
   }
+  #chartContainer3{
+    position: relative;
+    display: inline-block;
+    clear: both;
+    height: 100px;
+    top: 5px;
+  }
+  .col-xs-12{
+    float: left;
+    width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 /* -----------------Content------------------- */
 .content-layout{
   padding: 12px 0;
@@ -316,6 +331,21 @@ body{
 /* ---------------------------------- */
 /* ----------form-information-------- */
 /* ---------------------------------- */
+.light-text{
+  font-weight: normal;
+  font-size: 0.8em;
+}
+.label{
+  width: 230px;
+  text-align: right;
+  float: left;
+  padding-right: 20px;
+}
+.element-long{
+  width: 340px;
+  text-align: left;
+  float: left;
+}
 .form-info {
   align-items: center;
   /* background: #D8AA96; */
@@ -324,7 +354,7 @@ body{
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  height: 100vh;
+  height: 1000px;
   justify-items: center;
   /* weight: 100vw; */
 }
@@ -391,13 +421,13 @@ body{
   justify-content: space-between;
   width: 100%;
 }
-.right-container footer {
+.right-container .footer {
   align-items: center;
   background: #fff;
   display: grid;
   padding: 5px 40px;
 }
-.right-container footer button {
+.right-container .footer button {
   border: 1px solid rgba(0, 0, 0, 0.2);
   height: 38px;
   line-height: 38px;
@@ -405,24 +435,24 @@ body{
   border-radius: 19px;
   font-family: "Montserrat", sans-serif;
 }
-.right-container footer #back {
+.right-container .footer #back {
   background: #fff;
   transition: 0.2s all ease-in-out;
 }
-.right-container footer #back:hover {
+.right-container .footer #back:hover {
   background: #171A2B;
   color: white;
 }
-.right-container footer #next {
+.right-container .footer #next {
   background: #807182;
   border: 1px solid transparent;
   color: #fff;
 }
-.right-container footer #next:hover {
+.right-container .footer #next:hover {
   background: #171A2B;
 }
 
-.pets-name2 label, .pets-name label, .pets-breed label, .pets-birthday label, .pets-gender label, .pets-spayed-neutered label, .pets-weight label {
+.pets-name3 label, .pets-name2 label, .pets-name label, .pets-breed label, .pets-birthday label, .pets-gender label,.pets-spayed-neutered2 label, .pets-spayed-neutered label, .pets-weight label {
   display: block;
   margin-bottom: 5px;
   margin-top: 10px;
@@ -547,7 +577,7 @@ body{
   border-radius: 50%;
   display: inline-block;
   position: relative;
-  background-image: url(img/question-mark.png);
+  background-image: url(/S/Chart/img/question-mark.png);
   background-size: cover;
   background-position: center;
   /* margin-left: 500px ;
