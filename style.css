@@ -285,8 +285,8 @@ body{
   }
   #chartContainer1{
     margin-left: 100px;
-    height: 300px;
-    max-width: 40%;
+    /* height: 300px; */
+    /* max-width: 40%; */
   }
   #chartContainer2{
     margin-left: 100px;
@@ -307,6 +307,14 @@ body{
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
+  }
+  .well{
+    background-color: rgb(211,231,253);
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    width: 400px;
   }
 /* -----------------Content------------------- */
 .content-layout{
