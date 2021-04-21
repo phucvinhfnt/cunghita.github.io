@@ -519,6 +519,19 @@
           // var fall = document.getElementById("Fall-12").value;
           // var gender = document.getElementById("gender").value;
           // var yn = document.getElementById("YN-BMD").value;
+		 var ele = document.getElementsByName('gender');        
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked)
+                var gender = ele[i].value;
+            }
+
+          //var yn = document.getElementByName("YN-BMD").value;
+
+          var ele2 = document.getElementsByName('YN-BMD');      
+            for(i = 0; i < ele2.length; i++) {
+                if(ele2[i].checked)
+                var yn = ele2[i].value;
+            }
           // var hip = b[gender+'-hip-'+yn];
           // var any = b[gender+'-any-'+yn];
           //  if(wei == null)
@@ -589,6 +602,7 @@
         // ////////////////////////////////////
         
         /////////////////chart3///////////////////////
+		        var tb5 = Math.round((risk5_hip + risk5_any)/2);
         var t = document.getElementById("p-img");
             if(t == null){
         var y3 = document.getElementById("name").value;
@@ -621,7 +635,7 @@
  
       /////////////////////////////////
       ///////////////chart3.1//////////
-
+     var tb10 = Math.round((risk10_hip + risk10_any)/2);
       var t1 = document.getElementById("p1-img");
             if(t1 == null){
         var y3 = document.getElementById("name").value;
