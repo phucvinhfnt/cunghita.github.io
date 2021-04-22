@@ -19,8 +19,8 @@
 </head>
 <body>
     <div class="header">
-            <img class="Logo" src="img/prostate-angle-man_1.png" alt="logo">
-            <img class="Logo2" src="img/NHS.jpg" alt="logo" style="width: 150px;">
+            <img class="Logo" src="img/logo3.png" alt="logo">
+            <!-- <img class="Logo2" src="img/NHS.jpg" alt="logo" style="width: 150px;"> -->
     </div>
     <div id="menu">
       <ul>
@@ -231,8 +231,8 @@
         <!-- <div class=""> -->
       <!-- <div id="tm-gallery-page-chart1" class="tm-gallery-page hidden2"> -->
         <div id="tm-gallery-page-chart1" class="tm-gallery-page hidden2">
-        <p>This graph shows the percentage of men surviving at 10 and 15 years. 
-          These results are based on the inputs and treatments you selected</p>
+        <p>Biểu đồ này cho thấy tỷ lệ nguy cơ gãy xương hông và nguy cơ gãy các xương khác sau 5 và 10 năm. 
+          Các kết quả này dựa trên các đầu vào và phương pháp điều trị bạn đã chọn</p>
         <div id="chartContainer1"></div>
         </div>
         <div id="tm-gallery-page-chart2" class="tm-gallery-page hidden" >
@@ -246,22 +246,21 @@
               <!-- <div> -->
           <!-- <div id="chartContainer3" class="col-sm-7"> -->
             <div class="col-12" style="margin-bottom: 50px;">
-              This display shows the outcomes for 100 men. These results are based on the inputs and treatments you selected
-              <span>
+              Màn hình này hiển thị kết quả cho 100 người. Các kết quả này dựa trên các đầu vào và phương pháp điều trị bạn đã chọn               <span>
                 <div role="group" class="btn-group btn-5">
                   <button class="btn btn-default btn-sm custom active" type="button" id="five" onclick="fiveyears()">5</button>
                   <button class="btn btn-default btn-sm custom" type="button" id="ten" onclick="tenyears()">10</button>
                 </div>
-                years after diagnosis
+                năm sau khi chẩn đoán
               </span>
             </div>
             <div id="chartContainer3">
           </div>
           <div id="chartContainer3-1" class="hidden"></div>         
           <div class="col-md-6 offset-7 info-icon" style="padding-top:35px; position: absolute; margin-top: -50px;">          
-            <img src="/S/Chart/img/new_b.png" alt="" style="width: 30px;"> Số người sống sót
+            <img src="/S/Chart/img/new_b.png" alt="" style="width: 30px;"> Số người không gãy xương
             <br>
-            <img src="/S/Chart/img/new_p.png" alt="" style="width: 30px;"> Số người tử vong
+            <img src="/S/Chart/img/new_p.png" alt="" style="width: 30px;"> Số người gãy xương hông
           </div>
           <!-- </div> -->
           <!-- </div> -->
@@ -274,10 +273,10 @@
         <div class="col-md-4 hidden" id = "noti">
           <div class="well">
             <section>
-              <h3>Important</h3>
-              <p>These results are estimates based on data from men with similar characteristics. 
-                There are other important factors which affect outcomes. 
-                Your specialist will help you put these results in context.</p>
+              <h3>Quan trọng</h3>
+              <p>Những kết quả này là ước tính dựa trên dữ liệu từ những người có đặc điểm tương tự. 
+                Có những yếu tố quan trọng khác ảnh hưởng đến kết quả.
+                 Chuyên gia của bạn sẽ giúp bạn đặt những kết quả này vào ngữ cảnh. </p>
             </section>
                   </div>
                 </div>
@@ -505,7 +504,7 @@
 
         var chart = new CanvasJS.Chart("chartContainer1", { 
         // width: 600,
-        // height: 400,           
+        //height: 800,           
       title:{
         text: "5 & 10 year Fracture Risk",
       },
