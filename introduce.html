@@ -22,13 +22,13 @@
 </head>
 <body>
     <div class="header">
-            <img class="Logo" src="img/prostate-angle-man_1.png" alt="logo">
-            <img class="Logo2" src="img/NHS.jpg" alt="logo" style="width: 150px;">
+            <img class="Logo" src="img/logo3.png" alt="logo">
+            <!-- <img class="Logo2" src="img/NHS.jpg" alt="logo" style="width: 150px;"> -->
     </div>
     <div id="menu">
         <ul>
           <li><a href="home.html">Trang chủ</a></li>
-          <li><a href="#">Giới thiệu<i class="fas fa-caret-down"></i></a>
+          <li><a href="introduce.html">Giới thiệu<i class="fas fa-caret-down"></i></a>
             <ul class="sub-menu">
               <li><a href="introduce.html">Phần mềm chẩn đoán</a></li>
               <li><a href="introduce.html">Loãng xương là gì?</a></li>
@@ -36,25 +36,25 @@
               </li>
             </ul>
           </li>
-          <li><a href="#index.html">Chẩn đoán</a></li>
-          <li><a href="#">Hỏi đáp</a></li>
-          <li><a href="#">Liên hệ</a></li>
+          <li><a href="index.html">Chẩn đoán</a></li>
+          <!-- <li><a href="#">Hỏi đáp</a></li> -->
+          <li><a href="contact.html">Liên hệ</a></li>
         </ul>
       </div>
   <div style="background-color: rgb(211, 231, 253); height: 30px; width: 100%;"></div>
   <div class="main-content" tabindex="-1" class="row">
       <div class="col-sm-10 col-sm offset-1 col-lg-8 col-lg offset-2 header-content">
-          <h2 style="color:rgb(31, 107, 196);">
+          <h2 style="color:rgb(31, 107, 196);" id="hh">
               Tổng quát
           </h2>
           <ul>
-              <li><a href="#loangxuong">
+              <li><a onclick="loangxuong()">
                   <span style="color:rgb(31, 107, 196);">Loãng xương là gì?</span>
               </a></li>
-              <li><a href="#whoisfor">
-                  <span style="color: rgb(31, 107, 196);">Phần mềm chẩn đoán loãng xương dành cho ai?</span>
+              <li><a onclick="whoisfor()">
+                  <span style="color: rgb(31, 107, 196);">Ứng dụng tiên lượng nguy cơ gãy xương do loãng xương dành cho ai?</span>
               </a></li>
-              <li><a href="#howthiswork">
+              <li><a onclick="howthiswork()" id="hhh">
                   <span style="color: rgb(31, 107, 196);">Cách phần mềm hoạt động</span>
               </a></li>
           </ul>
@@ -65,43 +65,45 @@
               <section>
                   <h2 style="color: rgb(31, 107, 196);">Loãng xương là gì?</h2>
                   <p>Bệnh loãng xương, hay còn gọi là bệnh giòn xương hoặc xốp xương, là hiện tượng xương liên tục mỏng dần và mật độ chất trong xương ngày càng thưa dần,
-                       điều này khiến xương giòn hơn,
-                       dễ tổn thương và dễ bị gãy dù chỉ bị chấn thương nhẹ.</p>
-                       <p>Loãng xương là nguyên nhân chính gây ra gãy xương ở phụ nữ sau mãn kinh và người già.
-                            Gãy xương do loãng xương có thể gặp ở bất cứ xương nào, tuy nhiên hay gặp ở xương cột sống, xương đùi, xương cổ tay. 
-                            Một số xương bị gãy có thể không lành lại được, trong đó xương cột sống và xương đùi là những xương lành lại rất khó khăn,
-                            trong hầu hết trường hợp phải phẫu thuật với chi phí tốn kém.</p>
-                            <p>Bệnh loãng xương tiến triển thầm lặng. Thường người bệnh chỉ cảm thấy đau mỏi người không rõ ràng, 
-                                giảm dần chiều cao, gù vẹo cột sống. Đây là những biểu hiện chỉ được phát hiện sau một thời gian dài.
-                                 Nhiều trường hợp chỉ phát hiện khi có những biểu hiện gãy xương.</p>
-                                 <p>Tình trạng loãng xương sẽ càng trở nặng hơn khi về già. Do độ tuổi này, mật độ xương không đảm bảo đủ mức cho phép để bảo đảm xương cứng chắc như lúc ở tuổi trưởng thành.</p>
+                       điều này khiến xương giòn hơn, dễ tổn thương và dễ bị gãy dù chỉ bị chấn thương nhẹ.</p>
+                       <p>Loãng xương là nguyên nhân chính gây ra gãy xương ở phụ nữ sau mãn kinh và người già. Gãy xương do loãng xương có thể gặp ở bất cứ xương nào, tuy nhiên hay gặp ở xương cột sống, xương đùi, xương cổ tay.
+                            Một số xương bị gãy có thể không lành lại được, trong đó xương cột sống và xương đùi là những xương lành lại rất khó khăn, trong hầu hết trường hợp phải phẫu thuật với chi phí tốn kém. </p>
+                            <p>Bệnh loãng xương tiến triển thầm lặng. Thường người bệnh chỉ cảm thấy đau mỏi người không rõ ràng, giảm dần chiều cao, gù vẹo cột sống. Đây là những biểu hiện chỉ được phát hiện sau một thời gian dài. 
+                                Nhiều trường hợp chỉ phát hiện khi có những biểu hiện gãy xương.
+                                Tình trạng loãng xương sẽ càng trở nặng hơn khi về già. Do độ tuổi này, mật độ xương không đảm bảo đủ mức cho phép để bảo đảm xương cứng chắc như lúc ở tuổi trưởng thành.
+                                </p>
+                                 <p id="here">Loãng xương và gãy xương do loãng xương có thể dẫn đến tử vong. 
+                                     Bệnh nhân bị gãy xương hông có nguy cơ tử vong cao lên gần gấp 3 lần (nữ) đến ~4 lần (nam). Nguy hiểm hơn,  
+                                     khoảng 30% bệnh nhân bị gãy xương hông chết  trong vòng 12 tháng, tức là nguy cơ còn cao hơn cả chết do ung thư vú. Do đó, việc đánh giá nguy cơ gãy xương do loãng xương cần được tiến hành từ sớm để có thể giúp việc quản lí, 
+                                     điều trị và phòng ngừa bệnh loãng xương được tốt hơn.</p>                                  
                                  <hr style="height: 1px; color: rgb(31, 107, 196); background: rgb(31, 107, 196);">
                                 </section>
           </div>
           <div id="whoisfor">
             <section>
-                <h2 style="color: rgb(31, 107, 196);">Phần mềm chẩn đoán loãng xương dành cho ai?</h2>
-                <p>The tool is intended for men with non-metastatic prostate cancer who are deciding between conservative and radical management regimes. The tool is not for use in cases where prostate cancer has spread beyond the prostate. 
-                    The tool is also less well tested and likely to be less reliable in men with very high PSA,
-                     high grade group or high stage as very few men with these characteristics were managed with conservative management in our development or validation data.</p>
-                     <p>Nothing can ever tell an individual man exactly what is going to happen to him in the future but this tool will provide a realistic estimate or ‘best guess’ about the potential survival benefits of different treatment options.</p>
-                     <p class="emphasise">The web tool is not designed to give clinical advice and all decisions on treatment options must be made in consultation between the patient and a qualified doctor.</p>
+                <h2 style="color: rgb(31, 107, 196);">Ứng dụng tiên lượng nguy cơ gãy xương do loãng xương dành cho ai?</h2>
+                <p>Ứng dụng này hướng đến người già trên 50 tuổi, những người thuộc nhóm có nguy cơ bị loãng xương. Ứng dụng này chưa được kiểm tra
+                     và ít tin cậy hơn trên những người đang sử dụng thuốc điều trị loãng xương hay bị các bệnh về xương và ung thư xương. </p>
+                     <p>Ứng dụng cung cấp nguy cơ gãy xương ước tính đáng tin cậy dựa trên dữ liệu
+                          lớn nhằm cung cấp cho người dùng nguy cơ họ sẽ có thể bị gãy xương trong 5 hay 10 năm tới nếu không sử dụng thuốc điều trị loãng xương. </p>
+                     <p class="emphasise">Tuy nhiên, mọi kết quả từ ứng dụng chỉ có giá trị tham khảo mà  không đưa ra bất cứ lời khuyên y khoa nào. 
+                         Mọi quyết định liên quan đến điều trị loãng xương cần được sự tham vấn của bác sĩ chuyên khoa.</p>
                      <hr style="height: 1px; color: rgb(31, 107, 196); background: rgb(31, 107, 196);">
                     </section>                
           </div>
           <div id="howthiswork">
               <section>
                 <h2 style="color: rgb(31, 107, 196);">Cách phần mềm hoạt động</h2>
-                <p>
+                <!-- <p>
                     <a href="">This short video</a> may help explain how Predict Prostate works.
-                </p>
-                <p>The estimates that Predict Prostate produces are based on observational data from thousands of men previously diagnosed with non-metastatic prostate cancer from the East of England, UK.
-                     It provides the average survival rate for men in the past of similar age and with similar characteristics.</p>
-                     <p>These data were then used to help produce estimates of the potential outcomes for men who have prostate cancer now, depending on characteristics about them and their tumour. The model has also been tested among men diagnosed with prostate cancer in Singapore.
-                          It has been checked to make sure that the estimates it produces are as accurate as they can be given current nowledge. 
-                         It is important to note that the model can only give an estimate of what may happen and cannot say with certainty whether an individual patient will survive their cancer or not.</p>
+                </p> -->
+                <p>Mô hình toán học mà ứng dụng sử dụng được xây dựng dựa trên số liệu thu thập từ dự án nghiên cứu đoàn hệ về loãng xương lớn nhất nước Úc, bao gồm hơn 3500 người già trên 50 tuổi sống ở thành phố Dubbo, Úc.
+                     Dự án bắt đầu từ năm 1989, theo dõi các chỉ số sức khỏe xương và tình trạng gãy xương của người tham gia mỗi hai năm một lần, kéo dài trong hơn 20 năm. Sử dụng phương pháp Cox’s harzard modelling, các nhà nghiên cứu có thể ước tính 
+                     nguy cơ gãy xương do loãng xương trung bình của những gười già với cùng độ tuổi và cùng các yếu tố nguy cơ khác. </p>
+                     <p>Mô hình này sau đó được sử dụng để tiên lượng nguy cơ gãy xương cho người già dựa trên tình trạng các yếu tố nguy cơ của họ, bao gồm độ tuổi, lịch sử gãy xương, tiền sử té ngã, mật độ xương hoặc cân nặng. 
+                         Mô hình đã được áp dụng trên các dữ liệu lớn về loãng xương và gãy xương từ các nước khác nhau trên thế giới và cho kết quả khả quan với độ chính xác cao hơn các mô hình tương tự khác.</p>
                          <p>
-                             <a href="">The technical section</a> has more detail on how Predict Prostate was developed and tested.
+                             <a href="contact.html">Liên hệ</a> chúng tôi để biết cụ thể về công thức toán học được sử dụng.
                          </p>
               </section>
           </div>
@@ -111,25 +113,89 @@
       <div class="col-md-3 col-md offset-2 text-center">
           <img src="img/tool-icon.png" alt="tool-icon" aria-hidden="true">
           <h3>Chẩn đoán ngay?</h3>
-          <p>
+          <p style="color: black;">
             Công cụ này giúp hiểu cách điều trị bệnh loãng xương và có thể cải thiện tỷ lệ sống sót sau khi chẩn đoán.
           </p>
-          <div class="f-header">
+          <div class="f-header" style="margin-top: 20px;">
               <a href="index.html" class="btn">Bắt đầu chẩn đoán</a>
           </div>
       </div>
       <div class="col-md-3 col-md offset-2 text-center">
           <img src="img/faq-icon.png" alt="faq-icon" aria-hidden="true">
           <h3>Cần hỗ trợ?</h3>
-          <p>
+          <p style="color: black;">
             Nếu bạn đang chiến đấu với bệnh loãng xương, việc hỗ trợ thường dễ dàng hơn. Tại đây, bạn có thể tìm thêm thông tin và liên kết.
           </p>
           <div class="f-header">
-              <a href="#" class="btn">Hỗ trợ</a>
+              <a href="contact.html" class="btn">Hỗ trợ</a>
           </div>
       </div>
   </div>
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <h3>Trường đại học
+        <span>Hà Tĩnh</span>
+      </h3>
+      <p class="footer-links">
+        <a href="home.html">Trang chủ</a>
+        .
+        <a href="introduce.html">Giới thiệu</a>
+        .
+        <a href="index.html">Chẩn đoán</a>
+        .
+        <a href="ask.html">Hỏi đáp</a>
+        .
+        <a href="contact.html">Liên hệ</a>
+      </p>
+    </div>
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker-alt"></i>
+        <p>
+          <span>Xã Cẩm Vịnh, huyện Cẩm Xuyên, tỉnh</span>
+          Hà Tĩnh
+        </p>
+      </div>
+      <div>
+        <i class="fa fa-phone-alt"></i>
+        <p>+84 965 548 678</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="">contact@htu.edu.vn</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Về chúng tôi</span>
+        Dự án gồm 3 thành viên là sinh viên đến từ khoa Kỹ thuật - Công nghệ Trường Đại học Hà Tĩnh
+      </p>
+      <div class="footer-icons">
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
     <script>
+      function loangxuong()
+      {
+        document.querySelector('#hh').scrollIntoView({ 
+                   behavior: 'smooth'
+                  }); 
+      }      
+      function whoisfor()
+      {
+        document.querySelector('#here').scrollIntoView({ 
+                   behavior: 'smooth'
+                  }); 
+      }
+      function howthiswork()
+      {
+        document.querySelector('#howthiswork').scrollIntoView({ 
+                   behavior: 'smooth'
+                  }); 
+      }
              window.onscroll = function() {myFunction()};
               var header = document.getElementById("menu");
                var sticky = header.offsetTop;

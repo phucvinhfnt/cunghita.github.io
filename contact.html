@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="templatemo-style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css">
+    <script type="text/javascript" src="/S/Chart/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/S/Chart/canvasjs-3.2.11/canvasjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="queries.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+            <img class="Logo" src="img/logo3.png" alt="logo">
+            <!-- <img class="Logo2" src="img/NHS.jpg" alt="logo" style="width: 150px;"> -->
+    </div>
+    <div id="menu">
+        <ul>
+          <li><a href="home.html">Trang chủ</a></li>
+          <li><a href="introduce.html">Giới thiệu<i class="fas fa-caret-down"></i></a>
+            <ul class="sub-menu">
+              <li><a href="introduce.html">Phần mềm chẩn đoán</a></li>
+              <li><a href="introduce.html">Loãng xương là gì?</a></li>
+              <li><a href="introduce.html">Dành cho ai?</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="index.html">Chẩn đoán</a></li>
+          <!-- <li><a href="#">Hỏi đáp</a></li> -->
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div style="background-color: rgb(211, 231, 253); height: 30px; width: 100%;"></div>
+      <div class="wrap-contact100">
+        <div class="contact100-pic js-tilt"> 
+        <section class="contact-head">
+          <h2>Liên hệ</h2>
+          <p>Trụ sở chính: Xã Cẩm Vịnh, huyện Cẩm Xuyên, tỉnh Hà Tĩnh.</p>
+          <p>Cở sở Đại Nài: Số 447, đường 26/3, phường Đại Nài, TP. Hà Tĩnh.</p>
+          <p>Văn phòng khoa Kỹ thuật - Công nghệ Trường Đại học Hà Tĩnh
+              <br>
+              Email: <a href="">contact@htu.edu.vn</a>
+          </p>
+      </section>
+    </div>
+        <form class="contact100-form">
+          <span class="contact100-form-title">Điền câu hỏi</span>
+          <div class="wrap-input100 validate-input" data-validate="Name is required">
+            <input class="input100" type="text" name="name" placeholder="Họ và tên" autocomplete="off">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            </span>
+            </div>
+            <div class="wrap-input100 validate-input alert-validate" data-validate="Valid email is required: ex@abc.xyz">
+              <input class="input100" type="text" name="email" placeholder="Email" autocomplete="off">
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              </span>
+              </div>
+              <div class="wrap-input100 validate-input" data-validate="Message is required">
+                <textarea class="input100" name="message" placeholder="Tin nhắn" autocomplete="off"></textarea>
+                <span class="focus-input100"></span>
+                </div>
+                <div class="container-contact100-form-btn">
+                  <button class="contact100-form-btn">
+                  Gửi
+                  </button>
+                  </div>
+        </form>
+      </div>
+      <div class="row screen-only">
+        <div class="col-md-3 col-md offset-2 text-center">
+            <img src="img/tool-icon.png" alt="tool-icon" aria-hidden="true">
+            <h3>Chẩn đoán ngay?</h3>
+            <p>
+              Công cụ này giúp hiểu cách điều trị bệnh loãng xương và có thể cải thiện tỷ lệ sống sót sau khi chẩn đoán.
+            </p>
+            <div class="f-header">
+                <a href="index.html" class="btn">Bắt đầu chẩn đoán</a>
+            </div>
+        </div>
+        <div class="col-md-3 col-md offset-2 text-center">
+            <img src="img/faq-icon.png" alt="faq-icon" aria-hidden="true">
+            <h3>Cần hỗ trợ?</h3>
+            <p>
+              Nếu bạn đang chiến đấu với bệnh loãng xương, việc hỗ trợ thường dễ dàng hơn. Tại đây, bạn có thể tìm thêm thông tin và liên kết.
+            </p>
+            <div class="f-header">
+                <a href="#" class="btn">Hỗ trợ</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <h3>Trường đại học
+          <span>Hà Tĩnh</span>
+        </h3>
+        <p class="footer-links">
+          <a href="home.html">Trang chủ</a>
+          .
+          <a href="introduce.html">Giới thiệu</a>
+          .
+          <a href="index.html">Chẩn đoán</a>
+          .
+          <a href="ask.html">Hỏi đáp</a>
+          .
+          <a href="contact.html">Liên hệ</a>
+        </p>
+      </div>
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker-alt"></i>
+          <p>
+            <span>Xã Cẩm Vịnh, huyện Cẩm Xuyên, tỉnh</span>
+            Hà Tĩnh
+          </p>
+        </div>
+        <div>
+          <i class="fa fa-phone-alt"></i>
+          <p>+84 965 548 678</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="">contact@htu.edu.vn</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>Về chúng tôi</span>
+          Dự án gồm 3 thành viên là sinh viên đến từ khoa Kỹ thuật - Công nghệ Trường Đại học Hà Tĩnh
+        </p>
+        <div class="footer-icons">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

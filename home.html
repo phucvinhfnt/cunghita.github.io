@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="templatemo-style.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css">
-    <script src="/S/"></script>
     <script type="text/javascript" src="/S/Chart/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/S/Chart/canvasjs-3.2.11/canvasjs.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -20,60 +20,125 @@
 </head>
 <body>
     <div class="header">
-            <img class="Logo" src="img/prostate-angle-man_1.png" alt="logo">
-            <img class="Logo2" src="img/NHS.jpg" alt="logo" style="width: 150px;">
+            <img class="Logo" src="img/logo3.png" alt="logo">
+            <!-- <img class="Logo2" src="img/NHS.jpg" alt="logo" style="width: 150px;"> -->
     </div>
     <div id="menu">
       <ul>
         <li><a href="home.html">Trang chủ</a></li>
-        <li><a href="#">Giới thiệu<i class="fas fa-caret-down"></i></a>
+        <li><a href="introduce.html">Giới thiệu<i class="fas fa-caret-down"></i></a>
           <ul class="sub-menu">
             <li><a href="introduce.html">Phần mềm chẩn đoán</a></li>
-            <li><a href="introduce.html">Loãng xương là gì?</a></li>
-            <li><a href="introduce.html">Dành cho ai?</a>
+            <li tabindex="0"><a href="introduce.html">Loãng xương là gì?</a></li>
+            <li tabindex="0"><a href="introduce.html">Dành cho ai?</a>
             </li>
           </ul>
         </li>
-        <li><a href="#index.html">Chẩn đoán</a></li>
-        <li><a href="#">Hỏi đáp</a></li>
-        <li><a href="#">Liên hệ</a></li>
+        <li><a href="index.html">Chẩn đoán</a></li>
+        <!-- <li><a href="#">Hỏi đáp</a></li> -->
+        <li><a href="contact.html">Liên hệ</a></li>
       </ul>
     </div>
-  <div class="f-header">
+    <div id=""  class="row cnt-head">
+      <div class="col-12">
+        <div class="cnt-form">
+          <div class="cnt2-form">
+          </div>
+          <div class="row">
+            <div class="col-sm-5 col-sm offset-1 cnt3-form">
+              <h1 class="alison-blue-2">Tiên lượng nguy cơ gãy xương do loãng xương</h1>
+              <p>Một mô hình tiên lượng riêng cho mỗi cá nhân để ước tính nguy cơ gãy xương do loãng xương. </p>
+              <div class="link"> 
+                  <p>Ứng dụng ước tính nguy cơ gãy xương do loãng xương dựa trên số liệu thu thập <br> từ hơn 3500 người già trên 50 tuổi, theo dõi trên 20 năm.</p>
+                  <a href="index.html" class="btn">Bắt đầu chẩn đoán</a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+              <img src="img/logo4.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- <div class="f-header">
       <div class="right-header">
-        <h2>Chẩn đoán loãng xương</h2>
-        <p>Một mô hình tiên lượng riêng cho mọi người để chẩn đoán mắc bệnh loãng xương </p>
+        <h1>Tiên lượng nguy cơ gãy xương do loãng xương</h1>
+        <p>Một mô hình tiên lượng riêng cho mỗi cá nhân để ước tính nguy cơ gãy xương do loãng xương </p>
         <div class="link"> 
-            <a href="https://elifesciences.org/articles/61142">Dựa theo nghiên cứu của các nhà khoa học</a>
+            <p>Ứng dụng ước tính nguy cơ gãy xương do loãng xương dựa trên số liệu thu thập <br> từ hơn 3500 người già trên 50 tuổi, theo dõi trên 20 năm.</p>
         </div>
             <a href="index.html" class="btn">Bắt đầu chẩn đoán</a>
       </div>
       <div class="left-header">
           <img src="img/icon-imagery.png" alt="">
       </div>
-  </div>
+  </div> -->
   <div class="content-layout">
     <div class="column-item content-one">
-      <h2>Chẩn đoán bệnh loãng xương để làm gì?</h2>
-      <p>Công cụ chẩn đoán bệnh loãng xương là một công cụ để dự đoán các nguy cơ mắc bệnh loãng xương nhằm
-         giúp người bệnh có thể theo dõi để sớm tiếp nhận điều trị nếu có nguy cơ mắc bệnh
+      <h2>Tiên lượng nguy cơ gãy xương do loãng xương để làm gì?</h2>
+      <p>Mô hình tiên lượng  nguy cơ gãy xương do loãng xương nhằm giúp sớm xác định những cá nhân có nguy cơ gãy xương do loãng xương,
+        từ đó có kế hoạch quản lí bệnh loãng xương và phác đồ điều trị phù hợp.
          </p>
     </div>
     <div class="column-item content-two">
-      <h2>Làm cách nào để sử dụng Công cụ chẩn đoán bệnh loãng xương?</h2>
+      <h2>Làm cách nào để sử dụng ứng dụng tiên lượng nguy cơ gãy xương?</h2>
       <p>
-        Nhập thông tin chi tiết về bản thân và các chỉ số yêu cầu của bạn,
-         sau đó chọn xác nhận để để xem ước tính khả năng mắc bệnh của từng loại.
-         Chúng tôi khuyên bệnh nhân nên đọc phần Giới thiệu về Công cụ chẩn đoán trước khi sử dụng công cụ.
+        Nhập thông tin chi tiết về bản thân và các chỉ số yêu cầu của bạn, sau đó chọn xác nhận để để xem ước tính nguy cơ gãy bất kỳ loại xương nào và nguy cơ gãy xương hông do loãng xương. 
+        Chúng tôi khuyên người dùng nên đọc phần Giới thiệu về mô hình tiên lượng trước khi sử dụng mô hình.
       </p>
     </div>
     <div class="column-item content-three">
-      <h3>Công cụ chẩn đoán bệnh loãng xương sẽ cho tôi biết điều gì?</h3>
-      <p>Công cụ chẩn đoán bệnh loãng xương cho bạn thấy các chiến lược quản lý ban đầu khác nhau ảnh hưởng như thế nào đến tỷ lệ nam giới sống sót sau mười và mười lăm năm sau khi chẩn đoán.
-         Dữ liệu không được cá nhân hóa cũng được hiển thị về tác hại tiềm ẩn của từng loại điều trị.
-         Video ngắn này có thể giúp giải thích cách Dự đoán tuyến tiền liệt hoạt động </p>
+      <h2>Ứng dụng tiên lượng nguy cơ gãy xương do loãng xương sẽ cho tôi biết điều gì?</h2>
+      <p>Ứng dụng tiên lượng nguy cơ gãy xương do cho bạn thấy các yếu tố nguy cơ 
+        khác nhau ảnh hưởng như thế nào đến tỉ lệ nam và nữ gãy xương sau năm và mười năm sau khi tiên lượng. </p>
     </div>
   </div>
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <h3>Trường đại học
+        <span>Hà Tĩnh</span>
+      </h3>
+      <p class="footer-links">
+        <a href="home.html">Trang chủ</a>
+        .
+        <a href="introduce.html">Giới thiệu</a>
+        .
+        <a href="index.html">Chẩn đoán</a>
+        .
+        <a href="ask.html">Hỏi đáp</a>
+        .
+        <a href="contact.html">Liên hệ</a>
+      </p>
+    </div>
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker-alt"></i>
+        <p>
+          <span>Xã Cẩm Vịnh, huyện Cẩm Xuyên, tỉnh</span>
+          Hà Tĩnh
+        </p>
+      </div>
+      <div>
+        <i class="fa fa-phone-alt"></i>
+        <p>+84 965 548 678</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="">contact@htu.edu.vn</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Về chúng tôi</span>
+        Dự án gồm 3 thành viên là sinh viên đến từ khoa Kỹ thuật - Công nghệ Trường Đại học Hà Tĩnh
+      </p>
+      <div class="footer-icons">
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
   <script>
     window.onscroll = function() {myFunction()};
               var header = document.getElementById("menu");
