@@ -12,13 +12,13 @@ if(!isset($_SESSION['tendn'])) header("location:login.php");
     <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="templatemo-style.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css">
-    <script type="text/javascript" src="/S/Chart/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/S/Chart/canvasjs-3.2.11/canvasjs.min.js"></script>
+    <script type="text/javascript" src="/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="canvasjs-3.2.11/canvasjs.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/S/Chart/queries.css">
+    <link rel="stylesheet" href="/queries.css">
     <title>Tiên lượng nguy cơ gãy xương do loãng xương</title>
 </head>
 <body>
@@ -40,6 +40,9 @@ $row = mysqli_fetch_assoc($kq);
     <div class="header">
             <img class="Logo" src="img/logo3.png" alt="logo">
             <!-- <img class="Logo2" src="img/NHS.jpg" alt="logo" style="width: 150px;"> -->
+            <?php 
+            require_once('login_sc.php');
+            ?>
     </div>
     <div id="menu">
       <ul>
@@ -156,7 +159,7 @@ $row = mysqli_fetch_assoc($kq);
           </div>
           <div class='pets-spayed-neutered'>
             <label for='pet-spayed'>Bạn có thông tin về mật độ xương (BMD) hiện tại của bạn không?
-              <div class="avatar" data-tooltip="Mật độ xương (BMD) (tính bằn g/cm2) ở cổ xương đùi. Hoặc người dùng có thể nhập giá trị T-score (ghi rõ + hoặc - ở trước). 
+              <div class="avatar" style = "background-image: url(img/question2.png);" data-tooltip="Mật độ xương (BMD) (tính bằn g/cm2) ở cổ xương đùi. Hoặc người dùng có thể nhập giá trị T-score (ghi rõ + hoặc - ở trước). 
             Nếu không có thông tin về BMD, người dùng có thể bỏ trống và điền thông tin về cân nặng."></div>
             </label>
             <div class='radio-container'>
@@ -174,7 +177,7 @@ $row = mysqli_fetch_assoc($kq);
           </div>
           <div class='pets-name'>
             <label for='T-score'>T-scores
-              <div class="avatar" data-tooltip="T-score là giá trị BMD được chuẩn hóa với giá trị tham chiếu là BMD đỉnh, 
+              <div class="avatar" style = "background-image: url(img/question2.png);" data-tooltip="T-score là giá trị BMD được chuẩn hóa với giá trị tham chiếu là BMD đỉnh, 
               được xác định bởi BMD của những người trẻ có BMD bình thường có cùng giới tính và sắc tộc.
               Bạn phải nhập dấu + hoặc - ở phía trước giá trị như được hiển thị."></div>
             </label>
@@ -268,9 +271,9 @@ $row = mysqli_fetch_assoc($kq);
     <div class="tm-paging-links hidden" id = "tog">
       <nav>
         <ul>
-          <li class="tm-paging-item"><a href="#" class="tm-paging-link active">Chart</a></li>
-          <li class="tm-paging-item"><a  href="#" class="tm-paging-link">Bar</a></li>
-          <li class="tm-paging-item"><a href="#" class="tm-paging-link">Icons</a></li>
+          <li class="tm-paging-item"><a href="#" class="tm-paging-link active">Cột</a></li>
+          <li class="tm-paging-item"><a  href="#" class="tm-paging-link">Vạch</a></li>
+          <li class="tm-paging-item"><a href="#" class="tm-paging-link">Hình</a></li>
         </ul>
       </nav>
     </div>
@@ -278,12 +281,12 @@ $row = mysqli_fetch_assoc($kq);
       <!-- <div class="col-md-6 col-md offset-1"> -->
         <!-- <div class=""> -->
       <!-- <div id="tm-gallery-page-chart1" class="tm-gallery-page hidden2"> -->
-        <div id="tm-gallery-page-chart" class="tm-gallery-page hidden2">
+        <div id="tm-gallery-page-cột" class="tm-gallery-page hidden2">
         <p>Biểu đồ biểu diễn nguy cơ ước tính gãy xương hông và nguy cơ gãy bất kì loại xương nào do loãng xương trong vòng 5 và 10 năm nếu lựa chọn không điều trị loãng xương.
            Các kết quả này được ước tính dựa trên tình trạng các yếu tố nguy cơ mà bạn đã cung cấp. </p>
         <div id="chartContainer1"></div>
         </div>
-        <div id="tm-gallery-page-bar" class="tm-gallery-page hidden" >
+        <div id="tm-gallery-page-vạch" class="tm-gallery-page hidden" >
         <!-- <div id="chartContainer2"></div> -->
         <div class="chart4">
           <p>Nguy cơ gãy xương do loãng xương trong vòng 5 và 10 năm tới.</p>
@@ -358,7 +361,7 @@ $row = mysqli_fetch_assoc($kq);
         </div>
         </div>
         <!-- <div id="tm-gallery-page-chart3" class="tm-gallery-page row1 hidden" style="margin-left: 100px; position: relative;"> -->
-          <div id="tm-gallery-page-icons" class="tm-gallery-page row1 hidden">
+          <div id="tm-gallery-page-hình" class="tm-gallery-page row1 hidden">
           <!-- <div class="col-xs-12"> -->
             <!-- <div> -->
             <!-- <div class="row1" style="clear:both;"> -->
@@ -391,14 +394,14 @@ $row = mysqli_fetch_assoc($kq);
           <div id="chartContainer3-2" class="hidden"></div> 
           <div id="chartContainer3-3" class="hidden"></div>         
           <div class="col-md-6 offset-7 info-icon" id="info1" style="padding-top:35px; position: absolute; margin-top: -400px;">          
-            <img src="/S/Chart/img/new_b.png" alt="" style="width: 30px;"> Số người không gãy xương
+            <img src="/img/new_b.png" alt="" style="width: 30px;"> Số người không gãy xương
             <br>
-            <img src="/S/Chart/img/new_p.png" alt="" style="width: 30px;"> Số người gãy xương hông
+            <img src="/img/new_p.png" alt="" style="width: 30px;"> Số người gãy xương hông
           </div>
           <div class="col-md-6 offset-7 info-icon2 hidden" id="info2" style="padding-top:35px; position: absolute; margin-top: -400px;">          
-            <img src="/S/Chart/img/new_b.png" alt="" style="width: 30px;"> Số người không gãy xương
+            <img src="/img/new_b.png" alt="" style="width: 30px;"> Số người không gãy xương
             <br>
-            <img src="/S/Chart/img/new_p.png" alt="" style="width: 30px;"> Số người gãy bất kì xương nào
+            <img src="/img/new_p.png" alt="" style="width: 30px;"> Số người gãy bất kì xương nào
           </div>
           <!-- </div> -->
           <!-- </div> -->
@@ -903,29 +906,29 @@ $row = mysqli_fetch_assoc($kq);
       data: [  //array of dataSeries     
       { //dataSeries - first quarter
    /*** Change type "column" to "bar", "area", "line" or "pie"***/          
-       legendText: "Any Fracture",
+       legendText: "Gãy bất kì xương nào",
        showInLegend: true,
        type: "column",
         yValueFormatString: "#,##0.0#\"%\"",
        name: "First Quarter",
        dataPoints: [
-       { label: "5 years", y: +risk5_any , indexLabel: +risk5_any +"% risk"},
+       { label: "5 năm", y: +risk5_any , indexLabel: +risk5_any +"% nguy cơ"},
 
-       { label: "10 years", y: +risk10_any , indexLabel: +risk10_any +"% risk"}
+       { label: "10 năm", y: +risk10_any , indexLabel: +risk10_any +"% nguy cơ"}
       
        ]
      },
      { //dataSeries - second quarter
 
       type: "column",
-      legendText: "Hip Fracture",
+      legendText: "Gãy xương hông",
       showInLegend: true,
        yValueFormatString: "#,##0.0#\"%\"",
       name: "Second Quarter",                
       dataPoints: [
-      { label: "5 years", y: +risk5_hip , indexLabel: +risk5_hip +"% risk"},
+      { label: "5 năm", y: +risk5_hip , indexLabel: +risk5_hip +"% nguy cơ"},
 
-      { label: "10 years", y: +risk10_hip , indexLabel: +risk10_hip +"% risk"}
+      { label: "10 năm", y: +risk10_hip , indexLabel: +risk10_hip +"% nguy cơ"}
       ]
     }
     ]
@@ -949,16 +952,16 @@ $row = mysqli_fetch_assoc($kq);
      }
       if (i < (100-tb5_hip)) {
          //document.write("<div class='square'></div>");
-         //document.getElementById("chartContainer3").innerHTML = "<img src='/S/Chart/img/purple.png'>";
+         //document.getElementById("chartContainer3").innerHTML = "<img src='/img/purple.png'>";
          var para = document.createElement("IMG");
-        para.setAttribute("src", "/S/Chart/img/new_b.png");
+        para.setAttribute("src", "img/new_b.png");
         para.setAttribute("id","p-img");
         document.getElementById("chartContainer3").appendChild(para);
       } else {
          //document.write("<div class='empty-square'></div>");
-         //document.getElementById("chartContainer3").innerHTML = "<img src='/S/Chart/img/purple.png'>";
+         //document.getElementById("chartContainer3").innerHTML = "<img src='/img/purple.png'>";
          var para2 = document.createElement("IMG");
-        para2.setAttribute("src", "/S/Chart/img/new_p.png");
+        para2.setAttribute("src", "img/new_p.png");
         para2.setAttribute("id","p-img");
         document.getElementById("chartContainer3").appendChild(para2);      
       }
@@ -981,12 +984,12 @@ $row = mysqli_fetch_assoc($kq);
      }
       if (i < (100-tb10_hip)) {
          var para3_2 = document.createElement("IMG");
-        para3_2.setAttribute("src", "/S/Chart/img/new_b.png");
+        para3_2.setAttribute("src", "img/new_b.png");
         para3_2.setAttribute("id","p1-img");
         document.getElementById("chartContainer3-1").appendChild(para3_2);
       } else {
          var para3_3 = document.createElement("IMG");
-         para3_3.setAttribute("src", "/S/Chart/img/new_p.png");
+         para3_3.setAttribute("src", "img/new_p.png");
          para3_3.setAttribute("id","p1-img");
         document.getElementById("chartContainer3-1").appendChild(para3_3);
       }
@@ -1009,12 +1012,12 @@ $row = mysqli_fetch_assoc($kq);
      }
       if (i < (100-tb5_any)) {
          var para3_2_2 = document.createElement("IMG");
-        para3_2_2.setAttribute("src", "/S/Chart/img/new_b.png");
+        para3_2_2.setAttribute("src", "img/new_b.png");
         para3_2_2.setAttribute("id","p2-img");
         document.getElementById("chartContainer3-2").appendChild(para3_2_2);
       } else {
          var para3_3_3 = document.createElement("IMG");
-         para3_3_3.setAttribute("src", "/S/Chart/img/new_p.png");
+         para3_3_3.setAttribute("src", "img/new_p.png");
          para3_3_3.setAttribute("id","p2-img");
         document.getElementById("chartContainer3-2").appendChild(para3_3_3);
       }
@@ -1035,12 +1038,12 @@ $row = mysqli_fetch_assoc($kq);
      }
       if (i < (100-tb10_any)) {
          var para3_2_2_2 = document.createElement("IMG");
-        para3_2_2_2.setAttribute("src", "/S/Chart/img/new_b.png");
+        para3_2_2_2.setAttribute("src", "img/new_b.png");
         para3_2_2_2.setAttribute("id","p3-img");
         document.getElementById("chartContainer3-3").appendChild(para3_2_2_2);
       } else {
          var para3_3_3_3 = document.createElement("IMG");
-         para3_3_3_3.setAttribute("src", "/S/Chart/img/new_p.png");
+         para3_3_3_3.setAttribute("src", "img/new_p.png");
          para3_3_3_3.setAttribute("id","p3-img");
         document.getElementById("chartContainer3-3").appendChild(para3_3_3_3);
       }
@@ -1078,13 +1081,13 @@ $row = mysqli_fetch_assoc($kq);
         var cach= i%5;
         if(i<=risk5_any){
           var verti1 = document.createElement("IMG");
-      verti1.setAttribute("src", "/S/Chart/SVG/rect2.svg");
+      verti1.setAttribute("src", "SVG/rect2.svg");
       verti1.setAttribute("id","v-img");
       document.getElementById("chartContainer4").appendChild(verti1);
           }
           else{
           var verti2 = document.createElement("IMG");
-      verti2.setAttribute("src", "/S/Chart/SVG/rect.svg");
+      verti2.setAttribute("src", "SVG/rect.svg");
       verti2.setAttribute("id","v-img");
       document.getElementById("chartContainer4").appendChild(verti2);
           };
@@ -1100,13 +1103,13 @@ $row = mysqli_fetch_assoc($kq);
         var cach= i%5;
         if(i<=risk10_any){
           var verti1 = document.createElement("IMG");
-      verti1.setAttribute("src", "/S/Chart/SVG/rect2.svg");
+      verti1.setAttribute("src", "SVG/rect2.svg");
       verti1.setAttribute("id","v-img");
       document.getElementById("chartContainer4_2").appendChild(verti1);
           }
           else{
           var verti2 = document.createElement("IMG");
-      verti2.setAttribute("src", "/S/Chart/SVG/rect.svg");
+      verti2.setAttribute("src", "SVG/rect.svg");
       verti2.setAttribute("id","v-img");
       document.getElementById("chartContainer4_2").appendChild(verti2);
           };
@@ -1122,13 +1125,13 @@ $row = mysqli_fetch_assoc($kq);
         var cach= i%5;
         if(i<=risk5_hip){
           var verti1 = document.createElement("IMG");
-      verti1.setAttribute("src", "/S/Chart/SVG/rect3.svg");
+      verti1.setAttribute("src", "SVG/rect3.svg");
       verti1.setAttribute("id","v-img");
       document.getElementById("chartContainer4_3").appendChild(verti1);
           }
           else{
           var verti2 = document.createElement("IMG");
-      verti2.setAttribute("src", "/S/Chart/SVG/rect.svg");
+      verti2.setAttribute("src", "SVG/rect.svg");
       verti2.setAttribute("id","v-img");
       document.getElementById("chartContainer4_3").appendChild(verti2);
           };
@@ -1144,13 +1147,13 @@ $row = mysqli_fetch_assoc($kq);
         var cach= i%5;
         if(i<=risk10_hip){
           var verti1 = document.createElement("IMG");
-      verti1.setAttribute("src", "/S/Chart/SVG/rect3.svg");
+      verti1.setAttribute("src", "SVG/rect3.svg");
       verti1.setAttribute("id","v-img");
       document.getElementById("chartContainer4_4").appendChild(verti1);
           }
           else{
           var verti2 = document.createElement("IMG");
-      verti2.setAttribute("src", "/S/Chart/SVG/rect.svg");
+      verti2.setAttribute("src", "SVG/rect.svg");
       verti2.setAttribute("id","v-img");
       document.getElementById("chartContainer4_4").appendChild(verti2);
           };
