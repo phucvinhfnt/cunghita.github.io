@@ -24,7 +24,8 @@ if(isset($_POST["btn_submit"]))
         $num = mysqli_num_rows($kq);
         if($num == 0)
         {
-            echo "Tài khoản hoặc mật khẩu không đúng";
+            // echo "Tài khoản hoặc mật khẩu không đúng";
+           header('Location: login.php?ma=1');
         }
         else{
             $_SESSION["tendn"] = $user;
