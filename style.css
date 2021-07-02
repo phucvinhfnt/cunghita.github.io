@@ -797,7 +797,7 @@ body{
   border-radius: 50%;
   display: inline-block;
   position: relative;
-  background-image: url(/S/Chart/img/question2.png);
+  background-image: url(img/question2.png);
   background-size: cover;
   background-position: center;
   /* margin-left: 500px ;
