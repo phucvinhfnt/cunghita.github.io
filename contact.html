@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="test.css">
     <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.css">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="templatemo-style.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.css">
-    <script type="text/javascript" src="/S/Chart/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/S/Chart/canvasjs-3.2.11/canvasjs.min.js"></script>
+    <script type="text/javascript" src="bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="canvasjs-3.2.11/canvasjs.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -21,27 +22,66 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="header">
-            <img class="Logo" src="img/logo3.png" alt="logo">
-            <!-- <img class="Logo2" src="img/NHS.jpg" alt="logo" style="width: 150px;"> -->
-    </div>
-    <div id="menu">
-        <ul>
-          <li><a href="home.html">Trang chủ</a></li>
-          <li><a href="introduce.html">Giới thiệu<i class="fas fa-caret-down"></i></a>
-            <ul class="sub-menu">
-              <li><a href="introduce.html">Phần mềm chẩn đoán</a></li>
-              <li><a href="introduce.html">Loãng xương là gì?</a></li>
-              <li><a href="introduce.html">Dành cho ai?</a>
-              </li>
-            </ul>
-          </li>
-          <li><a href="index.html">Chẩn đoán</a></li>
-          <!-- <li><a href="#">Hỏi đáp</a></li> -->
-          <li><a href="contact.html">Liên hệ</a></li>
-        </ul>
+  <nav class="nav-menu">
+    <div class="wrapper">
+      <div class="logo">
+        <a href="#">
+            <img src="/img/garvan-logo.svg" alt="">
+        </a>
+        </div>
+      <input type="radio" name="slider" id="menu-btn" onclick="bar()">
+      <input type="radio" name="slider" id="close-btn" onclick="close2()">
+      <div class="section-nav">
+        <ul class="nav-links" id="nav-link">
+            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+            <li><a href="home.html" class="bg-color">Home</a></li>
+            <li>
+              <a href="introduce.html" class="desktop-item">About</a>
+              <input type="checkbox" id="showMega">
+              <label for="showMega" class="mobile-item">About</label>
+              <div class="mega-box">
+                <div class="content">
+                  <div class="row">
+                    <img src="/img/research.svg" alt="">
+                  </div>
+                  <div class="row">
+                    <header>About iPredict</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Who is for?</a></li>
+                      <li><a href="#">How iPredict works</a></li>
+                      <li><a href="#">Who build iPredict</a></li>
+                      <!-- <li><a href="#">Custom logo</a></li> -->
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Technical</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Development History</a></li>
+                      <li><a href="#">Publications</a></li>
+                      <li><a href="#">FAQs</a></li>
+                      <!-- <li><a href="#">Web Marketing</a></li> -->
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Security services</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Site Seal</a></li>
+                      <li><a href="#">VPS Hosting</a></li>
+                      <li><a href="#">Privacy Seal</a></li>
+                      <li><a href="#">Website design</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="index.html" class="bg-color">Predict</a></li>
+            <li><a href="contact.html" class="bg-color">Feedback</a></li>
+          </ul>
       </div>
-      <div style="background-color: rgb(211, 231, 253); height: 30px; width: 100%;"></div>
+      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+      <div style="background-color: rgb(211, 231, 253); height: 30px; width: 101%; margin-top: 86px;"></div>
       <div class="wrap-contact100">
         <div class="contact100-pic js-tilt"> 
         <section class="contact-head">
@@ -105,47 +145,48 @@
     </div>
     <footer class="footer-distributed">
       <div class="footer-left">
-        <h3>Trường đại học
-          <span>Hà Tĩnh</span>
+        <h3>Garvan
+          <span>institute of medical research</span>
         </h3>
         <p class="footer-links">
-          <a href="home.html">Trang chủ</a>
+          <a href="home.html">Home</a>
           .
-          <a href="introduce.html">Giới thiệu</a>
+          <a href="introduce.html">About</a>
           .
-          <a href="index.html">Chẩn đoán</a>
+          <a href="index.html">iPredict</a>
           .
-          <a href="ask.html">Hỏi đáp</a>
-          .
-          <a href="contact.html">Liên hệ</a>
+          <a href="contact.html">Feedback</a>
         </p>
       </div>
       <div class="footer-center">
         <div>
           <i class="fa fa-map-marker-alt"></i>
           <p>
-            <span>Xã Cẩm Vịnh, huyện Cẩm Xuyên, tỉnh</span>
-            Hà Tĩnh
+            <span>384 Victoria Street
+              Darlinghurst NSW 2010</span>
+            Australia
           </p>
         </div>
         <div>
           <i class="fa fa-phone-alt"></i>
-          <p>+84 965 548 678</p>
+          <p>T. +61 (02) 9295 8100 <br>
+            F. +61 (02) 9295 8101
+          </p>
         </div>
         <div>
           <i class="fa fa-envelope"></i>
-          <p><a href="">contact@htu.edu.vn</a></p>
+          <p><a href="">foundation@garvan.org.au</a></p>
         </div>
       </div>
       <div class="footer-right">
         <p class="footer-company-about">
-          <span>Về chúng tôi</span>
-          Dự án gồm 3 thành viên là sinh viên đến từ khoa Kỹ thuật - Công nghệ Trường Đại học Hà Tĩnh
+          <span>Follow us</span>
         </p>
         <div class="footer-icons">
           <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href=""><i class="fab fa-twitter"></i></a>
-          <a href=""><i class="fab fa-github"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-youtube"></i></a>
         </div>
       </div>
     </footer>
