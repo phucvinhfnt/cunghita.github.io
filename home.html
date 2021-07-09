@@ -104,17 +104,19 @@
           <div class="cnt2-form">
           </div>
           <div class="row">
-            <div class="col-sm-5 col-sm offset-1 cnt3-form">
-              <h1 class="alison-blue-2">Tiên lượng nguy cơ gãy xương do loãng xương</h1>
+            <div class="col-sm-6 col-sm offset-1 cnt3-form">
+              <h1 class="alison-blue-2">iPredict</h1>
               <p>Một mô hình tiên lượng riêng cho mỗi cá nhân để ước tính nguy cơ gãy xương do loãng xương. </p>
               <div class="link"> 
                   <p>Ứng dụng ước tính nguy cơ gãy xương do loãng xương dựa trên số liệu thu thập <br> từ hơn 3500 người già trên 50 tuổi, theo dõi trên 20 năm.</p>
-                  <a href="index.html" class="btn">Start Predict</a>
+                  <a href="index.html" class="btn"><i class="fas fa-stethoscope"></i> Start Predict</a>
+                  <a href="index.html" class="btn"><i class="fas fa-bone"></i> Skeletal Age</a>
+                  <a href="index.html" class="btn"><i class="far fa-clock"></i> Time to next BMD measurement</a>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <!-- <div class="col-sm-6">
               <img src="img/icon-imagery.png" alt="">
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -125,7 +127,7 @@
       <p>Mô hình tiên lượng  nguy cơ gãy xương do loãng xương nhằm giúp sớm xác định những cá nhân có nguy cơ gãy xương do loãng xương,
         từ đó có kế hoạch quản lí bệnh loãng xương và phác đồ điều trị phù hợp.
          </p>
-         <a href="index.html" class="btn">Start Predict</a>
+         <!-- <a href="index.html" class="btn">Start Predict</a> -->
     </div>
     <div class="column-item content-two">
       <h2>Làm cách nào để sử dụng ứng dụng tiên lượng nguy cơ gãy xương?</h2>
@@ -133,13 +135,13 @@
         Nhập thông tin chi tiết về bản thân và các chỉ số yêu cầu của bạn, sau đó chọn xác nhận để để xem ước tính nguy cơ gãy bất kỳ loại xương nào và nguy cơ gãy xương hông do loãng xương. 
         Chúng tôi khuyên người dùng nên đọc phần Giới thiệu về mô hình tiên lượng trước khi sử dụng mô hình.
       </p>
-      <a href="index.html" class="btn">Skeletal Age </a>
+      <!-- <a href="index.html" class="btn">Skeletal Age </a> -->
     </div>
     <div class="column-item content-three">
       <h2>Ứng dụng tiên lượng nguy cơ gãy xương do loãng xương sẽ cho tôi biết điều gì?</h2>
       <p>Ứng dụng tiên lượng nguy cơ gãy xương do cho bạn thấy các yếu tố nguy cơ 
         khác nhau ảnh hưởng như thế nào đến tỉ lệ nam và nữ gãy xương sau năm và mười năm sau khi tiên lượng. </p>
-        <a href="index.html" class="btn">Time to next BMD measurement</a>
+        <!-- <a href="index.html" class="btn">Time to next BMD measurement</a> -->
     </div>
   </div>
   <footer class="footer-distributed">
@@ -190,6 +192,15 @@
     </div>
   </footer>
   <script>
+     function bar()
+     {
+        var link = document.getElementById("nav-link");
+        link.classList.add("show");      
+     }
+     function close2()
+     {       
+         document.getElementById("nav-link").classList.remove("show");
+     }
     window.onscroll = function() {myFunction()};
               var header = document.getElementById("menu");
                var sticky = header.offsetTop;
